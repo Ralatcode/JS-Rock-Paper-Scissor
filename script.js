@@ -34,7 +34,7 @@ function playRound(playerInput, computerSelection) {
             return 'Scissors cuts paper! You lose.';
         }
 
-    } else if (playerInput == 'scissor') {
+    } else if (playerInput == 'scissors') {
         if (computerSelection == 'paper') {
             return 'Scissors cuts paper! You win!';
         } else {
@@ -44,5 +44,7 @@ function playRound(playerInput, computerSelection) {
     } else {
         return `Oops, ${playerInput} is an invalid input...`;
     }
-
 }
+
+console.log(playRound(playerInput, computerSelection));
+
