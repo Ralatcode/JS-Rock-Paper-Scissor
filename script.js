@@ -55,7 +55,8 @@ function playRound(playerInput, computerSelection) {
         }
 
     } else {
-        return `Oops, ${playerInput} is an invalid input...`;
+        console.log(`Oops, ${playerInput} is an invalid input...`);
+        return invalid++;
     }
 }
 
