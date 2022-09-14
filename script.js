@@ -16,7 +16,7 @@ function getComputerChoice(computerChoices) {
 let computerSelection = getComputerChoice(computerChoices);
 
 function playRound(playerInput, computerSelection) {
-    
+
     if (playerInput == computerSelection) {
         return `Both players chose ${playerInput}`;
 
@@ -32,6 +32,13 @@ function playRound(playerInput, computerSelection) {
             return 'Paper covers rock! You win!';
         } else {
             return 'Scissors cuts paper! You lose.';
+        }
+
+    } else if (playerInput == 'scissor') {
+        if (computerSelection == 'paper') {
+            return 'Scissors cuts paper! You win!';
+        } else {
+            return 'Rock smashes scissors! You lose.';
         }
     }
 
