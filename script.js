@@ -40,6 +40,9 @@ function playRound(playerInput, computerSelection) {
         } else {
             return 'Rock smashes scissors! You lose.';
         }
+
+    } else {
+        return `Oops, ${playerInput} is an invalid input...`;
     }
 
 }
