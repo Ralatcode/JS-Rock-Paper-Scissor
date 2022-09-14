@@ -17,28 +17,41 @@ let computerSelection = getComputerChoice(computerChoices);
 
 function playRound(playerInput, computerSelection) {
 
+    let playerScore = 0;
+    let computerScore = 0;
+    let draw = 0;
+    let invalid = 0;
+
     if (playerInput == computerSelection) {
-        return `Both players chose ${playerInput}`;
+        console.log(`Both players chose ${playerInput}`);
+        return draw++;
 
     } else if (playerInput == 'rock') {
         if (computerSelection == 'scissors') {
-            return 'Rock smashes scissors! You win!';
+            console.log('Rock smashes scissors! You win!');
+            return playerScore++;
         } else {
-            return 'Paper covers rock! You lose';
+            console.log('Paper covers rock! You lose');
+            return computerScore++;
         }
 
     } else if (playerInput == 'paper') {
         if (computerSelection == 'rock') {
-            return 'Paper covers rock! You win!';
+            console.log('Paper covers rock! You win!');
+            return playerScore++;
         } else {
-            return 'Scissors cuts paper! You lose.';
+            console.log('Scissors cuts paper! You lose.');
+            return computerScore++;
         }
 
     } else if (playerInput == 'scissors') {
         if (computerSelection == 'paper') {
-            return 'Scissors cuts paper! You win!';
+            console.log('Scissors cuts paper! You win!');
+            return playerScore++;
+
         } else {
-            return 'Rock smashes scissors! You lose.';
+            console.log('Rock smashes scissors! You lose.');
+            return computerScore++;
         }
 
     } else {
