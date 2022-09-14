@@ -66,7 +66,14 @@ function game(playerInput, computerSelection) {
         playRound(playerInput, computerSelection);
     }
 
-    return `Your total score is ${playerScore}, and the computer score is ${computerScore}.`
+    if (playerScore === computerScore) {
+        return `It was a tie, you both had ${playerScore}, with ${draw} draw(s) and ${invalid}invalid(s).`;
+    } else if (playerScore > computerScore) {
+        return `Hooray!!!, you won!!, you have successfully defeated the machines, your score was ${playerScore}; the computer scored ${computerScore}; other stat include ${invalid} invalid(s) and ${draw} draw(s).`
+    } else {
+        return `Well, this is awkward, you lost to the machines!!,Mankind has been defeated by Robots and now taking over the world, your score was ${playerScore}; the computer scored ${computerScore}; other stat include ${invalid} invalid(s) and ${draw} draw(s). Good luck next time`
+    }
+
 }
 
 console.log(game());
