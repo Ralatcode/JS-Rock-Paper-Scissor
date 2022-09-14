@@ -1,26 +1,27 @@
-// prompts user for input and converts to lowercase
 
-const playerInput = prompt("Choose between Rock, Paper and Scissors?").toLowerCase();
-
-// array containing choice for computer
-const computerChoices = ['rock', 'paper', 'scissors'];
-
-// function to return a random item from the array
-function getComputerChoice(computerChoices) {
-    // return random computer choice
-    return computerChoices[Math.floor(Math.random()*computerChoices.length)];
-}
-
-
-// calls function to get random choice and saves it in a variable
-let computerSelection = getComputerChoice(computerChoices);
+let playerScore = 0;
+let computerScore = 0;
+let draw = 0;
+let invalid = 0;
 
 function playRound(playerInput, computerSelection) {
+    // prompts user for input and converts to lowercase
 
-    let playerScore = 0;
-    let computerScore = 0;
-    let draw = 0;
-    let invalid = 0;
+    playerInput = prompt("Choose between Rock, Paper and Scissors?").toLowerCase();
+
+    // array containing choice for computer
+    const computerChoices = ['rock', 'paper', 'scissors'];
+
+    // function to return a random item from the array
+    function getComputerChoice(computerChoices) {
+    // return random computer choice
+    return computerChoices[Math.floor(Math.random()*computerChoices.length)];
+    }
+
+
+    // calls function to get random choice and saves it in a variable
+    computerSelection = getComputerChoice(computerChoices);
+
 
     if (playerInput == computerSelection) {
         console.log(`Both players chose ${playerInput}`);
@@ -60,5 +61,12 @@ function playRound(playerInput, computerSelection) {
     }
 }
 
-console.log(playRound(playerInput, computerSelection));
+function game(playerInput, computerSelection) {
+    for (let i = 0; i < 5; i++) {
+        playRound(playerInput, computerSelection);
+    }
 
+    return `Your total score is ${playerScore}, and the computer score is ${computerScore}.`
+}
+
+console.log(game());
