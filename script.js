@@ -15,3 +15,15 @@ function getComputerChoice(computerChoices) {
 // calls function to get random choice and saves it in a variable
 let computerSelection = getComputerChoice(computerChoices);
 
+function playRound(playerInput, computerSelection) {
+    if (playerInput == computerSelection) {
+        return `Both players chose ${playerInput}`;
+    } else if (playerInput == 'rock') {
+        if (computerSelection == 'scissors') {
+            return 'Rock smashes scissors! You win!';
+        } else {
+            return 'Paper covers rock! You lose';
+        }
+    }
+
+}
