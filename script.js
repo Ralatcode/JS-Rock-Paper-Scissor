@@ -7,7 +7,7 @@ const computerChoices = ['rock', 'paper', 'scissors'];
 
 // function to return a random item from the array
 function getComputerChoice(computerChoices) {
-
+    // return random computer choice
     return computerChoices[Math.floor(Math.random()*computerChoices.length)];
 }
 
