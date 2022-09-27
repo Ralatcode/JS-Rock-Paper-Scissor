@@ -4,10 +4,15 @@ let computerScore = 0;
 let draw = 0;
 let invalid = 0;
 
+const playerChoice = document.querySelectorAll('.choice-box > *');
+
+
+playerChoice.forEach(choice => choice.addEventListener('click', playRound));
+
 function playRound(playerInput, computerSelection) {
     // prompts user for input and converts to lowercase
 
-    playerInput = prompt("Choose between Rock, Paper and Scissors?").toLowerCase();
+    playerInput = this.classList.value;
 
     // array containing choice for computer
     const computerChoices = ['rock', 'paper', 'scissors'];
