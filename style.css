@@ -59,7 +59,34 @@ body {
     background-color: var(--color-3);
 }
 
-.rock, .paper, .scissors {
+.choice-title {
+    font-size: 2rem;
+    margin: 1.5rem 0;
+}
+
+.choice-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 5rem 0 3rem;
+}
+
+.choice-box > * {
     color: var(--color-3);
     cursor: pointer;
+    transition: all 200ms ease-in;
 }
+
+.choice-box h4 {
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+}
+
+.choice-box i:hover {
+    color: var(--color-2);
+}
+
+.choice-box h4:hover {
+    text-decoration: underline;
+}
+
