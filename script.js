@@ -3,6 +3,8 @@ const playerChoice = document.querySelectorAll('.choice-box > *');
 let playerDisplay = document.querySelector('#player-score');
 let computerDisplay = document.querySelector('#computer-score');
 const result = document.createElement('p');
+const modal = document.querySelector('#modal');
+const modalContent = document.querySelector('.modal-content');
 
 let playerScore = 0;
 let computerScore = 0;
@@ -29,7 +31,14 @@ function playRPS () {
     // ammend game result
     gameBoard.appendChild(result);
 
+    if (playerScore === 5 || computerScore === 5) {
+        decideWinner();
+    }
+
 }
+
+window.addEventListener('click', clearModal);
+
 
 
 // function to return a random item from the array
@@ -53,8 +62,20 @@ function showWinner(getWinner) {
     }
 }
 
-function decideWinner (playerScore, computerScore) {
-
+function decideWinner() {
+    modal.style.display = 'flex';
+    // display modal for result
+    if (playerScore > computerScore) {
+        modalContent.innerHTML = `
+        <i class="fa-solid fa-face-relieved fa-5x"></i>
+        <h3 class="modal-result">You Won!!</h3>
+        `;
+    } else {
+        modalContent.innerHTML = `
+        <i class="fa-solid fa-face-frown-open fa-5x"></i>
+        <h3 class="modal-result">You Lost!!</h3>
+        `;
+    }
 }
 
 function playRound(playerInput, computerSelection) {
@@ -96,7 +117,12 @@ function playRound(playerInput, computerSelection) {
         return invalid++;
     }
 
+}
 
+function clearModal(e) {
+    if (e.target == modal) {
+        modal.style.display = 'none';
+    }
 }
 
 
