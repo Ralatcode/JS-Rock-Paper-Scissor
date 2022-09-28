@@ -67,7 +67,7 @@ function decideWinner() {
     // display modal for result
     if (playerScore > computerScore) {
         modalContent.innerHTML = `
-        <i class="fa-solid fa-face-relieved fa-5x"></i>
+        <i class="fa-solid fa-face-smile fa-5x"></i>
         <h3 class="modal-result">You Won!!</h3>
         `;
     } else {

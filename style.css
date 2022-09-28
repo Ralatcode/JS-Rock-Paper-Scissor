@@ -124,6 +124,16 @@ body {
     animation-duration: var(--modal-duration);
 }
 
+.modal-content i {
+    color: var(--color-2);
+}
+
+.modal-result {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: var(--color-3);
+}
+
 @keyframes modalopen {
     from {
         opacity: 0;
