@@ -120,9 +120,19 @@ function playRound(playerInput, computerSelection) {
 }
 
 function clearModal(e) {
+    // hide modal
     if (e.target == modal) {
+        resetGame();
         modal.style.display = 'none';
     }
+}
+
+function resetGame() {
+    playerScore = 0;
+    computerScore = 0;
+    playerDisplay.textContent = `Player: ${playerScore}`;
+    computerDisplay.textContent = `Computer: ${computerScore}`;
+    result.textContent = '';
 }
 
 
