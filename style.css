@@ -6,6 +6,7 @@
     --color-1: #FFEB5E;
     --color-2: #6FB8AC;
     --color-3: #D36268;
+    --modal-icon: #5e72ff;
     --modal-duration: 1s;
 }
 
@@ -49,7 +50,7 @@ body {
     justify-content: space-around;
     background-color: var(--color-2);
     min-width: 100%;
-    margin: 1rem 0;
+    margin: 2rem 0 1.5rem;
 }
 
 .player, .computer {
@@ -140,7 +141,7 @@ body {
 }
 
 .modal-content i {
-    color: var(--color-2);
+    color: var(--modal-icon);
 }
 
 .modal-result {

@@ -5,6 +5,7 @@ let computerDisplay = document.querySelector('#computer-score');
 const result = document.createElement('p');
 const modal = document.querySelector('#modal');
 const modalContent = document.querySelector('.modal-content');
+const resetBtn = document.querySelector('.reset-btn');
 
 let playerScore = 0;
 let computerScore = 0;
@@ -37,7 +38,11 @@ function playRPS () {
 
 }
 
+// hides modal when the window is clicked
 window.addEventListener('click', clearModal);
+
+// allows player to reset game
+resetBtn.addEventListener('click', resetGame);
 
 
 
