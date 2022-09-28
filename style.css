@@ -6,6 +6,7 @@
     --color-1: #FFEB5E;
     --color-2: #6FB8AC;
     --color-3: #D36268;
+    --modal-duration: 1s;
 }
 
 body {
@@ -94,4 +95,40 @@ body {
 
 .result {
     white-space: pre;
+}
+
+
+.modal-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background: #fff;
+    text-align: center;
+    width: 40vw;
+    margin: 0 auto;
+    border-radius: 1rem;
+    padding: 3rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    animation-name: modalopen;
+    animation-duration: var(--modal-duration);
+}
+
+@keyframes modalopen {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
