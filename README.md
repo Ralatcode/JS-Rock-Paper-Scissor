@@ -4,11 +4,18 @@ link to github page [here](https://ralatcode.github.io/JS-Rock-Paper-Scissor/)
 
 # Work overview
 
-Using javascript to create a 5 round rock, paper and scissor game. at the end of the game, you will get the score and know the winner on the console. 
+Made a rock, paper scissors game using vanilla javascript, html and plain css. The game works by getting a random value from a Rock, paper, scissor array and the user can click the option to select their choice. The first player to get 5 wins is the winner, user can reset the game by click the reset button or by closing the result window.
 
-# some javascript practiced in the course of making the game
-- functions and variable 
-- loops 
+
+
+# some javascript concept practiced in the course of making the game
 - string manipulation 
 - lexical scoping for functions and variable
+- functions and variable 
+- loops in array
+- DOM manipulation
+- bubbling
+- event capture
+- propagation
+
 
