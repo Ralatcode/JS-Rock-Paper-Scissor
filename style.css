@@ -97,6 +97,21 @@ body {
     white-space: pre;
 }
 
+.reset-btn {
+    font: inherit;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    width: 150px;
+    margin-top: 1.5rem;
+    outline: none;
+    border: 2px solid var(--color-3);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reset-btn:hover {
+    background-color: var(--color-2);
+}
 
 .modal-container {
     position: absolute;
