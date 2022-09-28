@@ -9,7 +9,7 @@ let computerScore = 0;
 let draw = 0;
 let invalid = 0;
 
-playerChoice.forEach(choice => choice.addEventListener('click', playRPS));
+playerChoice.forEach(choice => choice.addEventListener('click', playRPS, true));
 
 result.classList.add('result');
 
@@ -28,6 +28,7 @@ function playRPS () {
 
     // ammend game result
     gameBoard.appendChild(result);
+
 }
 
 
@@ -50,6 +51,10 @@ function showWinner(getWinner) {
         computerScore++;
         computerDisplay.textContent = `Computer: ${computerScore}`;
     }
+}
+
+function decideWinner (playerScore, computerScore) {
+
 }
 
 function playRound(playerInput, computerSelection) {
@@ -94,19 +99,5 @@ function playRound(playerInput, computerSelection) {
 
 }
 
-
-
-if (playerScore === 5 || computerScore === 5) {
-    debugger
-    playerChoice.forEach(choice => choice.removeEventListener('click', gameEnd));
-}
-
-function gameEnd() {
-    if (playerScore > computerScore) {
-        result.textContent += `You Won!!!!!`;
-    } else {
-        result.textContent += `You Lost!!`;
-    }
-}
 
 
